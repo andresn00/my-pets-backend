@@ -19,20 +19,22 @@
       "type": "enumeration",
       "enum": [
         "pending",
-        "active",
         "completed",
         "canceled"
       ],
       "required": true
-    },
-    "peso": {
-      "type": "json"
     },
     "employees": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::employee.employee",
       "mappedBy": "appointment"
+    },
+    "vet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vet.vet",
+      "inversedBy": "appointments"
     }
   }
 }
