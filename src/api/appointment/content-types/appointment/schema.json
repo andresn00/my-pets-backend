@@ -24,16 +24,26 @@
       ],
       "required": true
     },
-    "employees": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::employee.employee",
-      "mappedBy": "appointment"
-    },
     "vet": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::vet.vet",
+      "inversedBy": "appointments"
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::employee.employee",
+      "inversedBy": "appointments"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "pet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pet.pet",
       "inversedBy": "appointments"
     }
   }

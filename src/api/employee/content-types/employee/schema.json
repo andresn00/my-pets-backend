@@ -37,11 +37,11 @@
       "target": "plugin::users-permissions.user",
       "mappedBy": "employee"
     },
-    "appointment": {
+    "appointments": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::appointment.appointment",
-      "inversedBy": "employees"
+      "mappedBy": "employees"
     }
   }
 }
