@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "controls",
+  "info": {
+    "singularName": "control",
+    "pluralName": "controls",
+    "displayName": "control",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "weight": {
+      "type": "string"
+    },
+    "temperature": {
+      "type": "string"
+    },
+    "datetime": {
+      "type": "datetime"
+    },
+    "pet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pet.pet",
+      "inversedBy": "controls"
+    },
+    "vet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vet.vet",
+      "inversedBy": "controls"
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::employee.employee",
+      "inversedBy": "controls"
+    }
+  }
+}

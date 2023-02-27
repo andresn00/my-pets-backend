@@ -49,6 +49,18 @@
       "relation": "oneToMany",
       "target": "api::appointment.appointment",
       "mappedBy": "pet"
+    },
+    "controls": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::control.control",
+      "mappedBy": "pet"
+    },
+    "vaccines": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vaccine.vaccine",
+      "mappedBy": "pet"
     }
   }
 }

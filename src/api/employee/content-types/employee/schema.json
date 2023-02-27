@@ -42,6 +42,18 @@
       "relation": "manyToMany",
       "target": "api::appointment.appointment",
       "mappedBy": "employees"
+    },
+    "controls": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::control.control",
+      "inversedBy": "employees"
+    },
+    "vaccines": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::vaccine.vaccine",
+      "mappedBy": "employees"
     }
   }
 }

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vaccines",
+  "info": {
+    "singularName": "vaccine",
+    "pluralName": "vaccines",
+    "displayName": "vaccine",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "datetime": {
+      "type": "datetime",
+      "required": true
+    },
+    "pet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pet.pet",
+      "inversedBy": "vaccines"
+    },
+    "vet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vet.vet",
+      "inversedBy": "vaccines"
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::employee.employee",
+      "inversedBy": "vaccines"
+    },
+    "type": {
+      "type": "string"
+    },
+    "dose": {
+      "type": "string"
+    },
+    "administrationRoute": {
+      "type": "string"
+    },
+    "observations": {
+      "type": "text"
+    }
+  }
+}
